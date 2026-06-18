@@ -101,36 +101,36 @@ function Signup() {
   );
 }
 
-const styles = {
-  container: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    minHeight: "100vh",
-    backgroundColor: "#f4f6f9",
-  },
-  card: {
-    width: "400px",
-    background: "#fff",
-    padding: "30px",
-    borderRadius: "10px",
-    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-  },
-  formGroup: {
-    marginBottom: "15px",
-    display: "flex",
-    flexDirection: "column",
-  },
-  button: {
-    width: "100%",
-    padding: "12px",
-    border: "none",
-    borderRadius: "5px",
-    backgroundColor: "#2563eb",
-    color: "#fff",
-    cursor: "pointer",
-    fontSize: "16px",
-  },
-};
+// const styles = {
+//   container: {
+//     display: "flex",
+//     justifyContent: "center",
+//     alignItems: "center",
+//     minHeight: "100vh",
+//     backgroundColor: "#f4f6f9",
+//   },
+//   card: {
+//     width: "400px",
+//     background: "#fff",
+//     padding: "30px",
+//     borderRadius: "10px",
+//     boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+//   },
+//   formGroup: {
+//     marginBottom: "15px",
+//     display: "flex",
+//     flexDirection: "column",
+//   },
+//   button: {
+//     width: "100%",
+//     padding: "12px",
+//     border: "none",
+//     borderRadius: "5px",
+//     backgroundColor: "#2563eb",
+//     color: "#fff",
+//     cursor: "pointer",
+//     fontSize: "16px",
+//   },
+// };
 
 export default Signup;

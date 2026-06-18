@@ -11,9 +11,9 @@ const YatraCard = () => {
 
   const [showQR, setShowQR] = useState(false);
 
-  const DynamicQR = ({ amount }) => {
-    const upiLink = `upi://pay?pa=sriram.d6189-3@okhdfcbank&pn=AhobilamYatra&am=${amount}&cu=INR`;
-  };
+  // const DynamicQR = ({ amount }) => {
+  //   const upiLink = `upi://pay?pa=sriram.d6189-3@okhdfcbank&pn=AhobilamYatra&am=${amount}&cu=INR`;
+  // };
 
   const handlePayment = () => {
     setShowQR(true);

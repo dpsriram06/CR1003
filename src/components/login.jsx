@@ -135,7 +135,7 @@ const styles = {
     boxShadow: "0 6px 20px rgba(0,0,0,0.08)",
     textAlign: "center",
   },
-  logo: {
+  logo1: {
     width: 80,
     height: 80,
     objectFit: "contain",

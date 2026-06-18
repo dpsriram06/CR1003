@@ -1,6 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Layout from "./components/layout";
 import Login from "./components/login";
 import Signup from "./components/signup";
@@ -8,7 +7,6 @@ import Home from "./components/home";
 import Locations from "./components/locations";
 import About from "./components/about";
 import Travel from "./components/travel";
-import Navbar from "./components/navbar";
 import TravelViewDetails from "./components/travelviewdetails";
 
 function App() {
