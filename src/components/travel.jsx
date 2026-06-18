@@ -7,7 +7,9 @@ const YatraCard = () => {
   const [bookOpen, setBookOpen] = useState(false);
 
   const [persons, setPersons] = useState(1);
-  const BookAmount = 2 * persons;
+
+  const BOOKING_PER_PERSON = 2001;
+  const BookAmount = BOOKING_PER_PERSON * persons;
 
   const [showQR, setShowQR] = useState(false);
 
@@ -221,11 +223,11 @@ const YatraCard = () => {
                     <b>Duration:</b> 3 Days / 2 Nights
                   </p>
                   <p>
-                    <b>Total Price For Each Person:</b> ₹13,000
+                    <b>No of Persons:</b> {persons}
                   </p>
+
                   <p>
-                    <b>Booking Amount For Each Person:</b> ₹2001 (To Confirm
-                    Your Seat)
+                    <b>Total Booking Amount:</b> ₹{BookAmount}
                   </p>
                 </div>
 
