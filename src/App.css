@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  margin: 0;
+}
+
+.main-content {
+  padding-top: 80px; /* navbar height */
+}
