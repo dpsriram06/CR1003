@@ -3,6 +3,7 @@ import logo from "./images/Ahobilam1.jpg";
 import { QRCodeCanvas } from "qrcode.react";
 
 const YatraCard = () => {
+  const isMobile = window.innerWidth <= 768;
   const [open, setOpen] = useState(false);
   const [bookOpen, setBookOpen] = useState(false);
 
@@ -94,7 +95,13 @@ const YatraCard = () => {
 
         <br />
         <center>
-          <div style={styles.card}>
+          <div
+            style={{
+              ...styles.card,
+              flexDirection: isMobile ? "column" : "row",
+              textAlign: isMobile ? "center" : "left",
+            }}
+          >
             {/* LEFT IMAGE */}
             <div style={styles.imageBox}>
               <img src={logo} alt="Travel Logo" style={styles.AhobilamImage} />
@@ -190,7 +197,12 @@ const YatraCard = () => {
             <h2>Book Your Yatra</h2>
 
             {/* 2 SEGMENT LAYOUT */}
-            <div style={styles.twoCol}>
+            <div
+              style={{
+                ...styles.twoCol,
+                flexDirection: isMobile ? "column" : "row",
+              }}
+            >
               {/* LEFT - CUSTOMER INPUT */}
               <div style={styles.leftBox}>
                 <h3>Customer Details</h3>
@@ -283,17 +295,225 @@ const YatraCard = () => {
 };
 
 const styles = {
+  //   container: {
+  //     fontFamily: "Arial",
+  //     padding: "20px",
+  //     color: "#661313",
+  //   },
+
+  //   card: {
+  //   width: "100%",
+  //   maxWidth: "900px",
+  //   display: "flex",
+  //   flexWrap: "wrap",
+  //   gap: "15px",
+  //   padding: "15px",
+  //   borderRadius: "12px",
+  //   boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
+  //   alignItems: "center",
+  //   background: "#fff",
+  // },
+
+  //   imageBox: {
+  //     flex: "0 0 150px",
+  //   },
+
+  //   AhobilamImage: {
+  //     width: "200px",
+  //     height: "auto",
+  //     borderRadius: "10px",
+  //   },
+
+  //   title: {
+  //     fontSize: "16px",
+  //     marginBottom: "10px",
+  //   },
+
+  //   rightBox: {
+  //     display: "flex",
+  //     flexDirection: "column",
+  //     gap: "10px",
+  //     alignItems: "center",
+  //   },
+
+  //   price: {
+  //     background: "#3b1f2b",
+  //     color: "white",
+  //     padding: "8px 15px",
+  //     borderRadius: "5px",
+  //     fontWeight: "bold",
+  //   },
+
+  //   btn: {
+  //     padding: "8px 12px",
+  //     border: "1px solid #3b1f2b",
+  //     background: "white",
+  //     cursor: "pointer",
+  //     borderRadius: "5px",
+  //     width: "120px",
+  //   },
+
+  //   /* ✅ MODAL STYLES */
+  //   overlay: {
+  //     position: "fixed",
+  //     top: 0,
+  //     left: 0,
+  //     width: "100%",
+  //     height: "100%",
+  //     backgroundColor: "rgba(0,0,0,0.6)",
+  //     display: "flex",
+  //     justifyContent: "center",
+  //     alignItems: "center",
+  //     zIndex: 999,
+  //   },
+
+  //   modal: {
+  //     background: "#fff",
+  //     width: "90%",
+  //     maxWidth: "1000px",
+  //     borderRadius: "10px",
+  //     padding: "20px",
+  //     position: "relative",
+  //   },
+
+  //   modalContent: {
+  //     maxHeight: "550px",
+  //     overflowY: "auto",
+  //     paddingRight: "10px",
+  //     marginTop: "10px",
+  //   },
+
+  //   closeBtn: {
+  //     position: "absolute",
+  //     top: "10px",
+  //     right: "10px",
+  //     padding: "6px 10px",
+  //     border: "none",
+  //     background: "#3b1f2b",
+  //     color: "#fff",
+  //     cursor: "pointer",
+  //     borderRadius: "5px",
+  //   },
+
+  //   // templeImg: {
+  //   //   width: "20%",
+  //   //   height: "auto",
+  //   //   borderRadius: "8px",
+  //   //   marginBottom: "8px",
+  //   // },
+
+  //   templeCard: {
+  //     display: "flex",
+  //     gap: "15px",
+  //     alignItems: "flex-start",
+  //     padding: "12px",
+  //     marginBottom: "15px",
+  //     borderRadius: "10px",
+  //     boxShadow: "0 3px 10px rgba(0,0,0,0.1)",
+  //     background: "#fff",
+  //   },
+
+  //   templeImg: {
+  //     width: "140px",
+  //     height: "100px",
+  //     borderRadius: "10px",
+  //     objectFit: "cover",
+  //   },
+
+  //   templeContent: {
+  //     display: "flex",
+  //     flexDirection: "column",
+  //     justifyContent: "flex-start",
+  //     flex: 1,
+  //   },
+
+  //   templeTitle: {
+  //     margin: "0 0 8px 0",
+  //     fontSize: "16px",
+  //     color: "#3b1f2b",
+  //   },
+
+  //   templeDesc: {
+  //     margin: 0,
+  //     fontSize: "14px",
+  //     color: "#555",
+  //     lineHeight: "1.4",
+  //   },
+
+  //   bookingModal: {
+  //     background: "#fff",
+  //     width: "90%",
+  //     maxWidth: "900px",
+  //     borderRadius: "10px",
+  //     padding: "20px",
+  //     position: "relative",
+  //   },
+
+  //   twoCol: {
+  //     display: "flex",
+  //     gap: "20px",
+  //     marginTop: "20px",
+  //   },
+
+  //   leftBox: {
+  //     flex: 1,
+  //     display: "flex",
+  //     flexDirection: "column",
+  //   },
+
+  //   rightBoxForm: {
+  //     flex: 1,
+  //     display: "flex",
+  //     flexDirection: "column",
+  //   },
+
+  //   input: {
+  //     padding: "10px",
+  //     margin: "8px 0",
+  //     border: "1px solid #ccc",
+  //     borderRadius: "5px",
+  //   },
+
+  //   textarea: {
+  //     padding: "10px",
+  //     height: "80px",
+  //     margin: "8px 0",
+  //     border: "1px solid #ccc",
+  //     borderRadius: "5px",
+  //   },
+
+  //   box: {
+  //     background: "#f5f5f5",
+  //     padding: "10px",
+  //     borderRadius: "8px",
+  //     marginBottom: "15px",
+  //   },
+
+  //   payBtn: {
+  //     padding: "10px",
+  //     background: "#28a745",
+  //     color: "#fff",
+  //     border: "none",
+  //     borderRadius: "5px",
+  //     cursor: "pointer",
+  //   },
+
   container: {
     fontFamily: "Arial",
-    padding: "20px",
+    padding: "15px",
     color: "#661313",
+    width: "100%",
+    boxSizing: "border-box",
   },
 
   card: {
-    width: "50%",
+    width: "100%",
+    maxWidth: "1000px",
+    margin: "0 auto",
     display: "flex",
-    gap: "15px",
-    padding: "15px",
+    flexWrap: "wrap",
+    gap: "20px",
+    padding: "20px",
     borderRadius: "12px",
     boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
     alignItems: "center",
@@ -301,187 +521,102 @@ const styles = {
   },
 
   imageBox: {
-    flex: "0 0 150px",
+    flex: "1 1 220px",
+    textAlign: "center",
   },
 
   AhobilamImage: {
-    width: "200px",
+    width: "100%",
+    maxWidth: "250px",
     height: "auto",
     borderRadius: "10px",
   },
 
-  title: {
-    fontSize: "16px",
-    marginBottom: "10px",
+  content: {
+    flex: "2 1 300px",
   },
 
   rightBox: {
+    flex: "1 1 180px",
     display: "flex",
     flexDirection: "column",
     gap: "10px",
     alignItems: "center",
   },
 
-  price: {
-    background: "#3b1f2b",
-    color: "white",
-    padding: "8px 15px",
-    borderRadius: "5px",
-    fontWeight: "bold",
-  },
-
   btn: {
-    padding: "8px 12px",
+    padding: "10px",
     border: "1px solid #3b1f2b",
-    background: "white",
-    cursor: "pointer",
+    background: "#fff",
     borderRadius: "5px",
-    width: "120px",
-  },
-
-  /* ✅ MODAL STYLES */
-  overlay: {
-    position: "fixed",
-    top: 0,
-    left: 0,
+    cursor: "pointer",
     width: "100%",
-    height: "100%",
-    backgroundColor: "rgba(0,0,0,0.6)",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    zIndex: 999,
-  },
-
-  modal: {
-    background: "#fff",
-    width: "90%",
-    maxWidth: "1000px",
-    borderRadius: "10px",
-    padding: "20px",
-    position: "relative",
-  },
-
-  modalContent: {
-    maxHeight: "550px",
-    overflowY: "auto",
-    paddingRight: "10px",
-    marginTop: "10px",
-  },
-
-  closeBtn: {
-    position: "absolute",
-    top: "10px",
-    right: "10px",
-    padding: "6px 10px",
-    border: "none",
-    background: "#3b1f2b",
-    color: "#fff",
-    cursor: "pointer",
-    borderRadius: "5px",
-  },
-
-  // templeImg: {
-  //   width: "20%",
-  //   height: "auto",
-  //   borderRadius: "8px",
-  //   marginBottom: "8px",
-  // },
-
-  templeCard: {
-    display: "flex",
-    gap: "15px",
-    alignItems: "flex-start",
-    padding: "12px",
-    marginBottom: "15px",
-    borderRadius: "10px",
-    boxShadow: "0 3px 10px rgba(0,0,0,0.1)",
-    background: "#fff",
-  },
-
-  templeImg: {
-    width: "140px",
-    height: "100px",
-    borderRadius: "10px",
-    objectFit: "cover",
-  },
-
-  templeContent: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "flex-start",
-    flex: 1,
-  },
-
-  templeTitle: {
-    margin: "0 0 8px 0",
-    fontSize: "16px",
-    color: "#3b1f2b",
-  },
-
-  templeDesc: {
-    margin: 0,
-    fontSize: "14px",
-    color: "#555",
-    lineHeight: "1.4",
+    maxWidth: "180px",
   },
 
   bookingModal: {
     background: "#fff",
-    width: "90%",
+    width: "95%",
     maxWidth: "900px",
     borderRadius: "10px",
     padding: "20px",
     position: "relative",
+    maxHeight: "90vh",
+    overflowY: "auto",
   },
 
   twoCol: {
     display: "flex",
+    flexWrap: "wrap",
     gap: "20px",
     marginTop: "20px",
   },
 
   leftBox: {
-    flex: 1,
+    flex: "1 1 300px",
     display: "flex",
     flexDirection: "column",
   },
 
   rightBoxForm: {
-    flex: 1,
+    flex: "1 1 300px",
     display: "flex",
     flexDirection: "column",
   },
 
   input: {
+    width: "100%",
     padding: "10px",
     margin: "8px 0",
     border: "1px solid #ccc",
     borderRadius: "5px",
+    boxSizing: "border-box",
   },
 
   textarea: {
+    width: "100%",
     padding: "10px",
     height: "80px",
     margin: "8px 0",
     border: "1px solid #ccc",
     borderRadius: "5px",
+    boxSizing: "border-box",
   },
 
-  box: {
-    background: "#f5f5f5",
-    padding: "10px",
-    borderRadius: "8px",
-    marginBottom: "15px",
+  modal: {
+    background: "#fff",
+    width: "95%",
+    maxWidth: "1000px",
+    borderRadius: "10px",
+    padding: "20px",
+    position: "relative",
+    maxHeight: "90vh",
+    overflowY: "auto",
   },
 
-  payBtn: {
-    padding: "10px",
-    background: "#28a745",
-    color: "#fff",
-    border: "none",
-    borderRadius: "5px",
-    cursor: "pointer",
+  modalContent: {
+    maxHeight: "70vh",
+    overflowY: "auto",
   },
 };
 
