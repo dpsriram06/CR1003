@@ -91,8 +91,6 @@ const YatraCard = () => {
         <h1 className="fw-bold m-0">Spiritual Yatra</h1>
       </header>
       <div style={styles.container}>
-        <h2 style={{ textAlign: "center", marginBottom: "20px" }}></h2>
-
         <br />
         <center>
           <div
