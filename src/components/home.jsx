@@ -5,16 +5,20 @@ import { Link } from "react-router-dom";
 const Home = () => {
   const destinations = [
     {
-      name: "Maldives",
-      image: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd",
+      name: "Agobilam",
+      image: "/images/ahobilam.jpg",
     },
     {
-      name: "Switzerland",
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+      name: "Mayapur",
+      image: "/images/mayapur.jpeg",
     },
     {
-      name: "Bali",
-      image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4",
+      name: "Virundavan",
+      image: "/images/Virundavan.jpeg",
+    },
+    {
+      name: "Puri Jaganath",
+      image: "/images/puriJaganath.jpeg",
     },
   ];
 
@@ -43,14 +47,16 @@ const Home = () => {
       </nav>
 
       <section className="hero">
-        <div className="hero-content">
-          <h1>Explore The World</h1>
-          <p>
-            Discover breathtaking destinations and unforgettable experiences.
-          </p>
+        <center>
+          <div className="hero-content">
+            <h1>Explore The World</h1>
+            <p>
+              Discover breathtaking destinations and unforgettable experiences.
+            </p>
 
-          <button className="btn-primary">Start Your Journey</button>
-        </div>
+            <button className="btn-primary">Start Your Journey</button>
+          </div>
+        </center>
       </section>
 
       <section className="destinations">
@@ -84,7 +90,7 @@ const Home = () => {
       </section>
 
       <footer>
-        <p>© 2026 ISKCON Vellore. All Rights Reserved.</p>
+        <p>© 2026 Tulsi. All Rights Reserved.</p>
       </footer>
     </div>
   );

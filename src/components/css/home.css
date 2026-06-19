@@ -38,22 +38,16 @@ body {
 .hero {
   height: 100vh;
 
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+  background-image: url("../images/homemayapur.png");
 
-  background-size: cover;
-  background-position: center;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
+  background-size: cover; /* fills screen properly */
+  background-position: center; /* keeps image centered */
+  background-repeat: no-repeat; /* avoids tiling */
+  height: 100vh; /* full viewport height */
 }
 
 .hero-content {
-  color: white;
+  color: rgb(8, 196, 243);
 }
 
 .hero h1 {
