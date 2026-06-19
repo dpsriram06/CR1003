@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div className="home main-content">
       <nav className="navbar">
-        <h2>✈ ISKCON Vellore</h2>
+        <h2>✈ Tulsi </h2>
 
         <ul>
           <li>
@@ -34,7 +34,7 @@ const Home = () => {
             <Link to="/travel">Yatra</Link>
           </li>
           <li>
-            <Link to="/locations">Locations</Link>
+            <Link to="/locations">Contact</Link>
           </li>
           <li>
             <Link to="/login">Login</Link>

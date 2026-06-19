@@ -28,7 +28,6 @@ export default function Login() {
       <div style={styles.container}>
         <div style={styles.card}>
           <img src={logo} alt="Travel Logo" style={styles.logo} />
-          <h2 style={styles.title}>ISKCON Vellore</h2>
           <form style={styles.form} onSubmit={handleSubmit}>
             <label style={styles.label} htmlFor="user">
               Mobile or Email
@@ -38,7 +37,7 @@ export default function Login() {
               name="user"
               value={user}
               onChange={(e) => setUser(e.target.value)}
-              placeholder="iskcon@example.com or 9876543210"
+              placeholder="tulsi@example.com or 9876543210"
               style={styles.input}
               required
             />

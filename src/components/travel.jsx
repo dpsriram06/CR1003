@@ -80,11 +80,19 @@ const YatraCard = () => {
 
   return (
     <div className="main-content">
+      <header
+        className="bg-primary text-white d-flex justify-content-center align-items-center"
+        style={{
+          width: "100%",
+          height: "80px",
+        }}
+      >
+        <h1 className="fw-bold m-0">Spiritual Yatra</h1>
+      </header>
       <div style={styles.container}>
-        <h2 style={{ textAlign: "center", marginBottom: "20px" }}>
-          Spiritual Yatra
-        </h2>
+        <h2 style={{ textAlign: "center", marginBottom: "20px" }}></h2>
 
+        <br />
         <center>
           <div style={styles.card}>
             {/* LEFT IMAGE */}
@@ -266,6 +274,10 @@ const YatraCard = () => {
           </div>
         </div>
       )}
+
+      <footer className="bg-dark text-white text-center py-3">
+        <p className="mb-0">© 2026 Tulsi. All Rights Reserved.</p>
+      </footer>
     </div>
   );
 };
